@@ -18,10 +18,10 @@ public class DbConnection {
 
         try {
             Connection connection = DriverManager.getConnection(uri, USER, PASSWORD);
-            System.out.println("✅ Connected to database: " + SCHEMA);
+            System.out.println(" Connected to database: " + SCHEMA);
             return connection;
         } catch (SQLException e) {
-            System.err.println("❌ Connection failed: " + e.getMessage());
+            System.err.println(" Connection failed: " + e.getMessage());
             throw new DbException("Unable to connect to the database", e);
         }
     }
